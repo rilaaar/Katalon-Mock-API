@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+CRUD,,,,2025-10-25 23:30:49,2025-10-25 23:30:59,10.590s,PASSED
+,,,,,,,
+Test Cases/USER CRUD,,,,2025-10-25 23:30:49,2025-10-25 23:30:59,10.035s,PASSED
+defaultPackage.RandomData.setRandomUserData(),,,,2025-10-25 23:30:50,2025-10-25 23:30:50,0.158s,PASSED
+"println(""Random ID yang digunakan: "" + randomId)",,,,2025-10-25 23:30:50,2025-10-25 23:30:50,0.007s,PASSED
+"createResponse = sendRequest(findTestObject(""POST - Create a New User""))",,,,2025-10-25 23:30:50,2025-10-25 23:30:53,3.140s,PASSED
+"userId = getElementPropertyValue(createResponse, ""id"")",,,,2025-10-25 23:30:53,2025-10-25 23:30:53,0.126s,PASSED
+println(createResponse.getResponseBodyContent()),,,,2025-10-25 23:30:53,2025-10-25 23:30:53,0.022s,PASSED
+"readResponse = sendRequestAndVerify(findTestObject(""GET - Single User"", [""UserId"":randomId]))",,,,2025-10-25 23:30:53,2025-10-25 23:30:55,2.013s,PASSED
+"verifyElementPropertyValue(readResponse, ""first_name"", ""[Manusia]"")",,,,2025-10-25 23:30:55,2025-10-25 23:30:55,0.026s,PASSED
+println(readResponse.getResponseBodyContent()),,,,2025-10-25 23:30:55,2025-10-25 23:30:55,0.002s,PASSED
+"updateResponse = sendRequest(findTestObject(""PATCH - Update a User"", [""UserId"":randomId]))",,,,2025-10-25 23:30:55,2025-10-25 23:30:57,2.045s,PASSED
+println(updateResponse.getResponseBodyContent()),,,,2025-10-25 23:30:57,2025-10-25 23:30:57,0.000s,PASSED
+"verifyUpdate = sendRequestAndVerify(findTestObject(""GET - Single User"", [""UserId"":randomId]))",,,,2025-10-25 23:30:57,2025-10-25 23:30:58,0.995s,PASSED
+"verifyElementPropertyValue(verifyUpdate, ""job_level"", ""[Senior Manager]"")",,,,2025-10-25 23:30:58,2025-10-25 23:30:58,0.024s,PASSED
+println(verifyUpdate.getResponseBodyContent()),,,,2025-10-25 23:30:58,2025-10-25 23:30:58,0.002s,PASSED
+"deleteResponse = sendRequest(findTestObject(""DELETE - Delete a User"", [""UserId"":randomId]))",,,,2025-10-25 23:30:58,2025-10-25 23:30:59,0.516s,PASSED
+println(deleteResponse.getResponseBodyContent()),,,,2025-10-25 23:30:59,2025-10-25 23:30:59,0.002s,PASSED
+"checkDeleted = sendRequest(findTestObject(""GET - Single User"", [""UserId"":randomId]))",,,,2025-10-25 23:30:59,2025-10-25 23:30:59,0.625s,PASSED
+"verifyResponseStatusCode(checkDeleted, 200)",,,,2025-10-25 23:30:59,2025-10-25 23:30:59,0.002s,PASSED
+println(checkDeleted.getResponseBodyContent()),,,,2025-10-25 23:30:59,2025-10-25 23:30:59,0.000s,PASSED

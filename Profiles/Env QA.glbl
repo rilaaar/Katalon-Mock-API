@@ -19,4 +19,14 @@
       <initValue>'https://hjaltjbqyttixmfubktb.supabase.co/rest/v1'</initValue>
       <name>BaseUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'99'</initValue>
+      <name>randomId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'userQA'</initValue>
+      <name>randomUsername</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

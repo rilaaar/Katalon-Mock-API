@@ -24,6 +24,16 @@ public class GlobalVariable {
      */
     public static Object BaseUrl
      
+    /**
+     * <p></p>
+     */
+    public static Object randomId
+     
+    /**
+     * <p></p>
+     */
+    public static Object randomUsername
+     
 
     static {
         try {
@@ -34,6 +44,8 @@ public class GlobalVariable {
             ApiKey = selectedVariables['ApiKey']
             Token = selectedVariables['Token']
             BaseUrl = selectedVariables['BaseUrl']
+            randomId = selectedVariables['randomId']
+            randomUsername = selectedVariables['randomUsername']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)

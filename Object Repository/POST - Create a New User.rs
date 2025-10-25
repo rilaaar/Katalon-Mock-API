@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot; {\n    \&quot;id\&quot;:99,\n    \&quot;first_name\&quot;:\&quot;Jane\&quot;,\n    \&quot;last_name\&quot;:\&quot;Smith\&quot;,\n    \&quot;username\&quot;:\&quot;ArumNahidah1\&quot;,\n    \&quot;job_position\&quot;:\&quot;QA Engineer\&quot;,\n    \&quot;job_level\&quot;:\&quot;Mid\&quot;,\n    \&quot;salary\&quot;:8000000,\n    \&quot;work_duration\&quot;:2\n  }&quot;,
+  &quot;text&quot;: &quot; {\n    \&quot;id\&quot;:${GlobalVariable.randomId},\n    \&quot;first_name\&quot;:\&quot;Manusia\&quot;,\n    \&quot;last_name\&quot;:\&quot;Super\&quot;,\n    \&quot;username\&quot;:\&quot;${GlobalVariable.randomUsername}\&quot;,\n    \&quot;job_position\&quot;:\&quot;QA Engineer\&quot;,\n    \&quot;job_level\&quot;:\&quot;Manager\&quot;,\n    \&quot;salary\&quot;:999999999999,\n    \&quot;work_duration\&quot;:30\n  }&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

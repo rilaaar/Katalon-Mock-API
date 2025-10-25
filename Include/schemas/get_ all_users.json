@@ -12,37 +12,34 @@
         "type": "string"
       },
       "first_name": {
-        "type": "string"
+        "type": ["string", "null"]
       },
       "last_name": {
-        "type": "string"
+        "type": ["string", "null"]
       },
       "username": {
         "type": "string"
       },
       "job_position": {
-        "type": "string"
+        "type": ["string", "null"]
       },
       "job_level": {
-        "type": "string"
+        "type": ["string", "null"],
+        "enum": ["Junior", "Mid", "Senior", "C-Level", "Manager", "Senior Manager","Middle", null]
       },
       "salary": {
-        "type": "number"
+        "type": ["number", "null"],
+        "minimum": 0
       },
       "work_duration": {
-        "type": "number"
+        "type": ["number", "null"],
+        "minimum": 0
       }
     },
     "required": [
       "id",
       "created_at",
-      "first_name",
-      "last_name",
-      "username",
-      "job_position",
-      "job_level",
-      "salary",
-      "work_duration"
+      "username"
     ]
   }
 }

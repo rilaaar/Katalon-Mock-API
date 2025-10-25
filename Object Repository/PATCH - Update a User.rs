@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot; {\n  \&quot;job_level\&quot;: \&quot;Manager\&quot;,\n  \&quot;salary\&quot;: 15000000\n  }&quot;,
+  &quot;text&quot;: &quot; {\n  \&quot;job_level\&quot;: \&quot;Senior Manager\&quot;,\n  \&quot;salary\&quot;: 9999999999999999\n  }&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

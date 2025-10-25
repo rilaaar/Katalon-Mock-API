@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "1632D9899F3FF021C5ADEDD7529FDF3D",
+  "keywordClasses": [
+    {
+      "name": "defaultPackage.RandomData",
+      "keywordMethods": [
+        {
+          "name": "setRandomUserData",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}
