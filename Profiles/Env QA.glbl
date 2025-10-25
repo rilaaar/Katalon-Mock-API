@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>Env QA</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'sb_secret_VMbVohxbtlp7c4H4xzd7UQ_CGP_TGVv'</initValue>
+      <name>ApiKey</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'sb_secret_VMbVohxbtlp7c4H4xzd7UQ_CGP_TGVv'</initValue>
+      <name>Token</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://hjaltjbqyttixmfubktb.supabase.co/rest/v1'</initValue>
+      <name>BaseUrl</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
