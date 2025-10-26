@@ -38,4 +38,3 @@ def schemaJson = new JSONObject(new JSONTokener(new FileInputStream(schemaFile))
 def responseJson = new JSONArray(response.getResponseBodyContent())
 
 SchemaLoader.load(schemaJson).validate(responseJson)
-

@@ -14,8 +14,8 @@ import internal.GlobalVariable as GlobalVariable
 
 Map<String, String> suiteProperties = new HashMap<String, String>();
 
-suiteProperties.put('id', 'Test Suites/Verify Schema json')
-suiteProperties.put('name', 'Verify Schema json')
+suiteProperties.put('id', 'Test Suites/CRUD')
+suiteProperties.put('name', 'CRUD')
 suiteProperties.put('description', '')
 suiteProperties.put('rerunTestFailImmediately', 'false')
 suiteProperties.put('retryCount', '0')
@@ -29,8 +29,8 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.t
 
 
 
-RunConfiguration.setExecutionSettingFile("D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_103648\\Verify Schema json\\20251026_103649\\execution.properties")
+RunConfiguration.setExecutionSettingFile("D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_141907\\CRUD\\20251026_141910\\execution.properties")
 
 TestCaseMain.beforeStart()
 
-TestCaseMain.startTestSuite('Test Suites/Verify Schema json', suiteProperties, new File("D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_103648\\Verify Schema json\\20251026_103649\\testCaseBinding"))
+TestCaseMain.startTestSuite('Test Suites/CRUD', suiteProperties, new File("D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_141907\\CRUD\\20251026_141910\\testCaseBinding"))
