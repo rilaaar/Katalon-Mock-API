@@ -23,7 +23,6 @@ import org.everit.json.schema.Schema as Schema
 import org.everit.json.schema.loader.SchemaLoader as SchemaLoader
 import org.json.JSONArray as JSONArray
 
-CustomKeywords.'defaultPackage.RandomData.setRandomUserData'()
 println("Random ID yang digunakan: " + GlobalVariable.randomId)
 
 def response = WS.sendRequestAndVerify(findTestObject('DELETE - Delete a User', [('UserId') : GlobalVariable.randomId]))

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot; {\n  \&quot;job_level\&quot;: \&quot;Senior Manager\&quot;,\n  \&quot;salary\&quot;: 9999999999999999\n  }&quot;,
+  &quot;text&quot;: &quot; {\n  \&quot;job_level\&quot;: \&quot;${jobLevel}\&quot;,\n  \&quot;salary\&quot;: ${jobSalary}\n  }&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -66,6 +66,20 @@
       <id>96b68d18-3c73-45e3-8e53-53d102ad9b38</id>
       <masked>false</masked>
       <name>UserId</name>
+   </variables>
+   <variables>
+      <defaultValue>'Senior Manager'</defaultValue>
+      <description></description>
+      <id>5ec42fbf-4196-4588-ae69-068e04e8e837</id>
+      <masked>false</masked>
+      <name>jobLevel</name>
+   </variables>
+   <variables>
+      <defaultValue>'9999999999999999'</defaultValue>
+      <description></description>
+      <id>ccd8cdf3-8e78-467e-9269-6fade026fbd7</id>
+      <masked>false</masked>
+      <name>jobSalary</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

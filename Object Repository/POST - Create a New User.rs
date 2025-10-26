@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot; {\n    \&quot;id\&quot;:${GlobalVariable.randomId},\n    \&quot;first_name\&quot;:\&quot;Manusia\&quot;,\n    \&quot;last_name\&quot;:\&quot;Super\&quot;,\n    \&quot;username\&quot;:\&quot;${GlobalVariable.randomUsername}\&quot;,\n    \&quot;job_position\&quot;:\&quot;QA Engineer\&quot;,\n    \&quot;job_level\&quot;:\&quot;Manager\&quot;,\n    \&quot;salary\&quot;:999999999999,\n    \&quot;work_duration\&quot;:30\n  }&quot;,
+  &quot;text&quot;: &quot; {\n    \&quot;id\&quot;:${GlobalVariable.randomId},\n    \&quot;first_name\&quot;:\&quot;${firstName}\&quot;,\n    \&quot;last_name\&quot;:\&quot;${lastName}\&quot;,\n    \&quot;username\&quot;:\&quot;${GlobalVariable.randomUsername}\&quot;,\n    \&quot;job_position\&quot;:\&quot;${jobPosition}\&quot;,\n    \&quot;job_level\&quot;:\&quot;${jobLevel}\&quot;,\n    \&quot;salary\&quot;:${jobSalary},\n    \&quot;work_duration\&quot;:${workDuration}\n  }&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -60,6 +60,48 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'Manusia'</defaultValue>
+      <description></description>
+      <id>657f3f19-f1db-4881-bc2d-c9630cfe563a</id>
+      <masked>false</masked>
+      <name>firstName</name>
+   </variables>
+   <variables>
+      <defaultValue>'Super'</defaultValue>
+      <description></description>
+      <id>9a05c329-2868-4891-bfd0-20ff977d41e8</id>
+      <masked>false</masked>
+      <name>lastName</name>
+   </variables>
+   <variables>
+      <defaultValue>'QA Engineer'</defaultValue>
+      <description></description>
+      <id>55979274-cfc6-42fc-b0bf-3f2151e32322</id>
+      <masked>false</masked>
+      <name>jobPosition</name>
+   </variables>
+   <variables>
+      <defaultValue>'Manager'</defaultValue>
+      <description></description>
+      <id>aa7bb299-6bdd-40af-9ab4-450435c2882a</id>
+      <masked>false</masked>
+      <name>jobLevel</name>
+   </variables>
+   <variables>
+      <defaultValue>'999999999999'</defaultValue>
+      <description></description>
+      <id>aa2f85b6-cc38-4f5b-9943-dd170d00ebb7</id>
+      <masked>false</masked>
+      <name>jobSalary</name>
+   </variables>
+   <variables>
+      <defaultValue>'30'</defaultValue>
+      <description></description>
+      <id>4faa76c0-6382-458a-916e-02a26c19e674</id>
+      <masked>false</masked>
+      <name>workDuration</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

@@ -24,8 +24,7 @@
         "type": ["string", "null"]
       },
       "job_level": {
-        "type": ["string", "null"],
-        "enum": ["Junior", "Mid", "Senior", "C-Level", "Manager", "Senior Manager","Middle", null]
+        "type": ["string", "null"]
       },
       "salary": {
         "type": ["number", "null"],
