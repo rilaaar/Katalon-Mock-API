@@ -1,0 +1,50 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Verify Schema json,,,,2025-10-26 10:37:26,2025-10-26 10:37:40,13.292s,PASSED
+,,,,,,,
+Test Cases/Verifikasi Schema/POST - Create a New User,,,,2025-10-26 10:37:27,2025-10-26 10:37:34,7.224s,PASSED
+defaultPackage.RandomData.setRandomUserData(),,,,2025-10-26 10:37:28,2025-10-26 10:37:28,0.239s,PASSED
+"println(""Random ID yang digunakan: "" + randomId)",,,,2025-10-26 10:37:28,2025-10-26 10:37:28,0.003s,PASSED
+"response = sendRequestAndVerify(findTestObject(""POST - Create a New User""))",,,,2025-10-26 10:37:28,2025-10-26 10:37:34,5.885s,PASSED
+println(response.getResponseBodyContent()),,,,2025-10-26 10:37:34,2025-10-26 10:37:34,0.001s,PASSED
+"schemaPath = getProjectDir() + ""/Include/schemas/create_a_new_user.json""",,,,2025-10-26 10:37:34,2025-10-26 10:37:34,0.005s,PASSED
+schemaFile = new java.io.File(schemaPath),,,,2025-10-26 10:37:34,2025-10-26 10:37:34,0.000s,PASSED
+schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))),,,,2025-10-26 10:37:34,2025-10-26 10:37:34,0.032s,PASSED
+responseJson = new org.json.JSONArray(response.getResponseBodyContent()),,,,2025-10-26 10:37:34,2025-10-26 10:37:34,0.006s,PASSED
+load(schemaJson).validate(responseJson),,,,2025-10-26 10:37:34,2025-10-26 10:37:34,0.235s,PASSED
+,,,,,,,
+Test Cases/Verifikasi Schema/GET - All Users,,,,2025-10-26 10:37:34,2025-10-26 10:37:36,1.756s,PASSED
+"response = sendRequestAndVerify(findTestObject(""GET - All Users""))",,,,2025-10-26 10:37:35,2025-10-26 10:37:36,0.973s,PASSED
+println(response.getResponseBodyContent()),,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.050s,PASSED
+"schemaPath = getProjectDir() + ""/Include/schemas/get_ all_users.json""",,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.002s,PASSED
+schemaFile = new java.io.File(schemaPath),,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.004s,PASSED
+schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))),,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.083s,PASSED
+responseJson = new org.json.JSONArray(response.getResponseBodyContent()),,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.024s,PASSED
+load(schemaJson).validate(responseJson),,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.093s,PASSED
+,,,,,,,
+Test Cases/Verifikasi Schema/GET - Single User,,,,2025-10-26 10:37:36,2025-10-26 10:37:37,1.332s,PASSED
+defaultPackage.RandomData.setRandomUserData(),,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.030s,PASSED
+"println(""Random ID yang digunakan: "" + randomId)",,,,2025-10-26 10:37:36,2025-10-26 10:37:36,0.010s,PASSED
+"response = sendRequestAndVerify(findTestObject(""GET - Single User"", [""UserId"":randomId]))",,,,2025-10-26 10:37:36,2025-10-26 10:37:37,1.032s,PASSED
+println(response.getResponseBodyContent()),,,,2025-10-26 10:37:37,2025-10-26 10:37:37,0.000s,PASSED
+"schemaPath = getProjectDir() + ""/Include/schemas/get_single_user.json""",,,,2025-10-26 10:37:37,2025-10-26 10:37:37,0.000s,PASSED
+schemaFile = new java.io.File(schemaPath),,,,2025-10-26 10:37:37,2025-10-26 10:37:37,0.000s,PASSED
+schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))),,,,2025-10-26 10:37:37,2025-10-26 10:37:37,0.000s,PASSED
+responseJson = new org.json.JSONArray(response.getResponseBodyContent()),,,,2025-10-26 10:37:37,2025-10-26 10:37:37,0.000s,PASSED
+load(schemaJson).validate(responseJson),,,,2025-10-26 10:37:37,2025-10-26 10:37:37,0.000s,PASSED
+,,,,,,,
+Test Cases/Verifikasi Schema/PATCH - Update a User,,,,2025-10-26 10:37:37,2025-10-26 10:37:39,1.215s,PASSED
+defaultPackage.RandomData.setRandomUserData(),,,,2025-10-26 10:37:38,2025-10-26 10:37:38,0.000s,PASSED
+"println(""Random ID yang digunakan: "" + randomId)",,,,2025-10-26 10:37:38,2025-10-26 10:37:38,0.000s,PASSED
+"response = sendRequestAndVerify(findTestObject(""PATCH - Update a User"", [""UserId"":randomId]))",,,,2025-10-26 10:37:38,2025-10-26 10:37:39,0.916s,PASSED
+println(response.getResponseBodyContent()),,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.000s,PASSED
+"schemaPath = getProjectDir() + ""/Include/schemas/update_a_user.json""",,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.000s,PASSED
+schemaFile = new java.io.File(schemaPath),,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.000s,PASSED
+schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))),,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.000s,PASSED
+responseJson = new org.json.JSONArray(response.getResponseBodyContent()),,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.000s,PASSED
+load(schemaJson).validate(responseJson),,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.000s,PASSED
+,,,,,,,
+Test Cases/Verifikasi Schema/DELETE - Delete a User,,,,2025-10-26 10:37:39,2025-10-26 10:37:40,1.149s,PASSED
+defaultPackage.RandomData.setRandomUserData(),,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.003s,PASSED
+"println(""Random ID yang digunakan: "" + randomId)",,,,2025-10-26 10:37:39,2025-10-26 10:37:39,0.000s,PASSED
+"response = sendRequestAndVerify(findTestObject(""DELETE - Delete a User"", [""UserId"":randomId]))",,,,2025-10-26 10:37:39,2025-10-26 10:37:40,0.813s,PASSED
+println(response.getResponseBodyContent()),,,,2025-10-26 10:37:40,2025-10-26 10:37:40,0.000s,PASSED

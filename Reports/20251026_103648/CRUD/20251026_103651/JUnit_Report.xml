@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="CRUD" time="9.426" tests="1" failures="0" errors="0">
+   <testsuite name="CRUD" tests="1" failures="0" errors="0" time="9.426" skipped="0" timestamp="2025-10-26 10:38:42" hostname="rilaa - JustR" id="Test Suites/CRUD">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_103648\\CRUD\\20251026_103651"/>
+         <property name="logFiles" value="D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_103648\\CRUD\\20251026_103651\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="rilaa - JustR"/>
+         <property name="hostAddress" value="192.168.0.116"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.3.0.208"/>
+      </properties>
+      <testcase name="Test Cases/USER CRUD" time="9.092" classname="Test Cases/USER CRUD" status="PASSED">
+         <system-out><![CDATA[2025-10-26 10:38:42 - [TEST_CASE][PASSED] - Test Cases/USER CRUD: Test Cases/USER CRUD
+
+2025-10-26 10:38:42 - [TEST_STEP][PASSED] - defaultPackage.RandomData.setRandomUserData(): defaultPackage.RandomData.setRandomUserData is PASSED
+
+2025-10-26 10:38:42 - [MESSAGE][PASSED] - defaultPackage.RandomData.setRandomUserData is PASSED
+
+2025-10-26 10:38:42 - [TEST_STEP][PASSED] - println("Random ID yang digunakan: " + randomId): null
+
+2025-10-26 10:38:43 - [TEST_STEP][PASSED] - createResponse = sendRequest(findTestObject("POST - Create a New User")): Send request successfully
+
+2025-10-26 10:38:46 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_103648\CRUD\20251026_103651\requests\main\0.har
+
+2025-10-26 10:38:46 - [MESSAGE][PASSED] - Send request successfully
+
+2025-10-26 10:38:46 - [TEST_STEP][PASSED] - userId = getElementPropertyValue(createResponse, "id"): null
+
+2025-10-26 10:38:46 - [TEST_STEP][PASSED] - println(createResponse.getResponseBodyContent()): null
+
+2025-10-26 10:38:46 - [TEST_STEP][PASSED] - readResponse = sendRequestAndVerify(findTestObject("GET - Single User", ["UserId":randomId])): Send request and verify the response successfully
+
+2025-10-26 10:38:47 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_103648\CRUD\20251026_103651\requests\main\1.har
+
+2025-10-26 10:38:47 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2025-10-26 10:38:47 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2025-10-26 10:38:47 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2025-10-26 10:38:47 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2025-10-26 10:38:47 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 10:38:47 - [TEST_STEP][PASSED] - getStatusCode()).isEqualTo(200): null
+
+2025-10-26 10:38:47 - [MESSAGE][PASSED] - Verify response successfully
+
+2025-10-26 10:38:47 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2025-10-26 10:38:47 - [TEST_STEP][PASSED] - verifyElementPropertyValue(readResponse, "first_name", "[Manusia]"): Verify element property value successfully
+
+2025-10-26 10:38:47 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2025-10-26 10:38:47 - [TEST_STEP][PASSED] - println(readResponse.getResponseBodyContent()): null
+
+2025-10-26 10:38:47 - [TEST_STEP][PASSED] - updateResponse = sendRequest(findTestObject("PATCH - Update a User", ["UserId":randomId])): Send request successfully
+
+2025-10-26 10:38:48 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_103648\CRUD\20251026_103651\requests\main\2.har
+
+2025-10-26 10:38:48 - [MESSAGE][PASSED] - Send request successfully
+
+2025-10-26 10:38:48 - [TEST_STEP][PASSED] - println(updateResponse.getResponseBodyContent()): null
+
+2025-10-26 10:38:48 - [TEST_STEP][PASSED] - verifyUpdate = sendRequestAndVerify(findTestObject("GET - Single User", ["UserId":randomId])): Send request and verify the response successfully
+
+2025-10-26 10:38:49 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_103648\CRUD\20251026_103651\requests\main\3.har
+
+2025-10-26 10:38:49 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2025-10-26 10:38:49 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2025-10-26 10:38:49 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2025-10-26 10:38:49 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2025-10-26 10:38:49 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 10:38:49 - [TEST_STEP][PASSED] - getStatusCode()).isEqualTo(200): null
+
+2025-10-26 10:38:49 - [MESSAGE][PASSED] - Verify response successfully
+
+2025-10-26 10:38:49 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2025-10-26 10:38:49 - [TEST_STEP][PASSED] - verifyElementPropertyValue(verifyUpdate, "job_level", "[Senior Manager]"): Verify element property value successfully
+
+2025-10-26 10:38:49 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2025-10-26 10:38:49 - [TEST_STEP][PASSED] - println(verifyUpdate.getResponseBodyContent()): null
+
+2025-10-26 10:38:49 - [TEST_STEP][PASSED] - deleteResponse = sendRequest(findTestObject("DELETE - Delete a User", ["UserId":randomId])): Send request successfully
+
+2025-10-26 10:38:50 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_103648\CRUD\20251026_103651\requests\main\4.har
+
+2025-10-26 10:38:50 - [MESSAGE][PASSED] - Send request successfully
+
+2025-10-26 10:38:50 - [TEST_STEP][PASSED] - println(deleteResponse.getResponseBodyContent()): null
+
+2025-10-26 10:38:50 - [TEST_STEP][PASSED] - checkDeleted = sendRequest(findTestObject("GET - Single User", ["UserId":randomId])): Send request successfully
+
+2025-10-26 10:38:51 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_103648\CRUD\20251026_103651\requests\main\5.har
+
+2025-10-26 10:38:51 - [MESSAGE][PASSED] - Send request successfully
+
+2025-10-26 10:38:51 - [TEST_STEP][PASSED] - verifyResponseStatusCode(checkDeleted, 200): Verify response status code successfully
+
+2025-10-26 10:38:51 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 10:38:51 - [TEST_STEP][PASSED] - println(checkDeleted.getResponseBodyContent()): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2025-10-26 10:38:42 - [TEST_SUITE][PASSED] - CRUD: Test Cases/USER CRUD]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>
