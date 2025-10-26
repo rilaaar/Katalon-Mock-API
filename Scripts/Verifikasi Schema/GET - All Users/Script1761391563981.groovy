@@ -22,17 +22,34 @@ import org.json.JSONTokener as JSONTokener
 import org.everit.json.schema.Schema as Schema
 import org.everit.json.schema.loader.SchemaLoader as SchemaLoader
 import org.json.JSONArray as JSONArray
+import com.kms.katalon.core.util.KeywordUtil
+import groovy.json.JsonSlurper
+import groovy.json.JsonBuilder
+
+
 
 def response = WS.sendRequestAndVerify(findTestObject('GET - All Users'))
 println(response.getResponseBodyContent())
 
 def schemaPath = RunConfiguration.getProjectDir() + '/Include/schemas/get_ all_users.json'
-
 def schemaFile = new File(schemaPath)
-
 def schemaJson = new JSONObject(new JSONTokener(new FileInputStream(schemaFile)))
-
 def responseJson = new JSONArray(response.getResponseBodyContent())
 
 SchemaLoader.load(schemaJson).validate(responseJson)
+
+
+println("Random ID yang digunakan: " + GlobalVariable.randomId)
+
+def json = new JsonSlurper().parseText(response.getResponseBodyContent())
+def targetUser = json.find { it.id.toString() == GlobalVariable.randomId.toString() }
+
+if (targetUser) {
+	println("User id ditemukan: ${targetUser.id}")
+	println("Detail data user:")
+	println(new JsonBuilder(targetUser).toPrettyString())
+} else {
+	assert false : "User ID ${GlobalVariable.randomId} tidak ditemukan di response"
+}
+
 
