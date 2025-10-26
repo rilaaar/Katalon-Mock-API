@@ -22,18 +22,34 @@ import org.json.JSONTokener as JSONTokener
 import org.everit.json.schema.Schema as Schema
 import org.everit.json.schema.loader.SchemaLoader as SchemaLoader
 import org.json.JSONArray as JSONArray
+import groovy.json.JsonSlurper
+import groovy.json.JsonBuilder
 
 println("Random ID yang digunakan: " + GlobalVariable.randomId)
 
 def response = WS.sendRequestAndVerify(findTestObject('GET - Single User', [('UserId') : GlobalVariable.randomId]))
-println(response.getResponseBodyContent())
+
+def responseBody = response.getResponseBodyContent()
+println("Raw Response Body:")
+println(responseBody)
+
+def json = new JsonSlurper().parseText(responseBody)
+if (json instanceof Map && json.containsKey("data")) {
+	println("Data user:")
+	println(new JsonBuilder(json.data).toPrettyString())
+}
+else if (json instanceof List) {
+	println("Response array:")
+	println(new JsonBuilder(json).toPrettyString())
+}
+else {
+	println(" Response bukan array 'data':")
+	println(new JsonBuilder(json).toPrettyString())
+}
 
 def schemaPath = RunConfiguration.getProjectDir() + '/Include/schemas/get_single_user.json'
-
 def schemaFile = new File(schemaPath)
-
 def schemaJson = new JSONObject(new JSONTokener(new FileInputStream(schemaFile)))
-
 def responseJson = new JSONArray(response.getResponseBodyContent())
 
 SchemaLoader.load(schemaJson).validate(responseJson)

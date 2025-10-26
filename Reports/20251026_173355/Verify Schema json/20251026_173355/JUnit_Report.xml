@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Verify Schema json" time="10.272" tests="5" failures="0" errors="0">
+   <testsuite name="Verify Schema json" tests="5" failures="0" errors="0" time="10.272" skipped="0" timestamp="2025-10-26 17:34:03" hostname="rilaa - JustR" id="Test Suites/Verify Schema json">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_173355\\Verify Schema json\\20251026_173355"/>
+         <property name="logFiles" value="D:\\Ra\\Katalon\\Katalon Mock API\\Reports\\20251026_173355\\Verify Schema json\\20251026_173355\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="rilaa - JustR"/>
+         <property name="hostAddress" value="192.168.0.116"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.3.0.208"/>
+      </properties>
+      <testcase name="Test Cases/Verifikasi Schema/POST - Create a New User" time="5.49" classname="Test Cases/Verifikasi Schema/POST - Create a New User" status="PASSED">
+         <system-out><![CDATA[2025-10-26 17:34:04 - [TEST_CASE][PASSED] - Test Cases/Verifikasi Schema/POST - Create a New User: Test Cases/Verifikasi Schema/POST - Create a New User
+
+2025-10-26 17:34:04 - [TEST_STEP][PASSED] - defaultPackage.RandomData.setRandomUserData(): defaultPackage.RandomData.setRandomUserData is PASSED
+
+2025-10-26 17:34:04 - [MESSAGE][PASSED] - defaultPackage.RandomData.setRandomUserData is PASSED
+
+2025-10-26 17:34:04 - [TEST_STEP][PASSED] - println("Random ID yang digunakan: " + randomId): null
+
+2025-10-26 17:34:04 - [TEST_STEP][PASSED] - response = sendRequestAndVerify(findTestObject("POST - Create a New User")): Send request and verify the response successfully
+
+2025-10-26 17:34:08 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_173355\Verify Schema json\20251026_173355\requests\main\0.har
+
+2025-10-26 17:34:08 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+2025-10-26 17:34:09 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - getStatusCode()).isEqualTo(201): null
+
+2025-10-26 17:34:09 - [MESSAGE][PASSED] - Verify response successfully
+
+2025-10-26 17:34:09 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - println(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - schemaPath = getProjectDir() + "/Include/schemas/create_a_new_user.json": null
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - schemaFile = new java.io.File(schemaPath): null
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))): null
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - responseJson = new org.json.JSONArray(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - load(schemaJson).validate(responseJson): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Verifikasi Schema/GET - All Users" time="1.184" classname="Test Cases/Verifikasi Schema/GET - All Users" status="PASSED">
+         <system-out><![CDATA[2025-10-26 17:34:09 - [TEST_CASE][PASSED] - Test Cases/Verifikasi Schema/GET - All Users: Test Cases/Verifikasi Schema/GET - All Users
+
+2025-10-26 17:34:09 - [TEST_STEP][PASSED] - response = sendRequestAndVerify(findTestObject("GET - All Users")): Send request and verify the response successfully
+
+2025-10-26 17:34:10 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_173355\Verify Schema json\20251026_173355\requests\main\1.har
+
+2025-10-26 17:34:10 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2025-10-26 17:34:10 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - getStatusCode()).isEqualTo(200): null
+
+2025-10-26 17:34:10 - [MESSAGE][PASSED] - Verify response successfully
+
+2025-10-26 17:34:10 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - println(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - schemaPath = getProjectDir() + "/Include/schemas/get_ all_users.json": null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - schemaFile = new java.io.File(schemaPath): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - responseJson = new org.json.JSONArray(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - load(schemaJson).validate(responseJson): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - println("Random ID yang digunakan: " + randomId): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - targetUser = json.find({ -> ... }): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - if (targetUser): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - println(User ditemukan: $targetUser.username): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Verifikasi Schema/GET - Single User" time="1.193" classname="Test Cases/Verifikasi Schema/GET - Single User" status="PASSED">
+         <system-out><![CDATA[2025-10-26 17:34:10 - [TEST_CASE][PASSED] - Test Cases/Verifikasi Schema/GET - Single User: Test Cases/Verifikasi Schema/GET - Single User
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - println("Random ID yang digunakan: " + randomId): null
+
+2025-10-26 17:34:10 - [TEST_STEP][PASSED] - response = sendRequestAndVerify(findTestObject("GET - Single User", ["UserId":randomId])): Send request and verify the response successfully
+
+2025-10-26 17:34:11 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_173355\Verify Schema json\20251026_173355\requests\main\2.har
+
+2025-10-26 17:34:11 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2025-10-26 17:34:11 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - getStatusCode()).isEqualTo(200): null
+
+2025-10-26 17:34:11 - [MESSAGE][PASSED] - Verify response successfully
+
+2025-10-26 17:34:11 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - println(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - schemaPath = getProjectDir() + "/Include/schemas/get_single_user.json": null
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - schemaFile = new java.io.File(schemaPath): null
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))): null
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - responseJson = new org.json.JSONArray(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:11 - [TEST_STEP][PASSED] - load(schemaJson).validate(responseJson): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Verifikasi Schema/PATCH - Update a User" time="1.067" classname="Test Cases/Verifikasi Schema/PATCH - Update a User" status="PASSED">
+         <system-out><![CDATA[2025-10-26 17:34:11 - [TEST_CASE][PASSED] - Test Cases/Verifikasi Schema/PATCH - Update a User: Test Cases/Verifikasi Schema/PATCH - Update a User
+
+2025-10-26 17:34:12 - [TEST_STEP][PASSED] - println("Random ID yang digunakan: " + randomId): null
+
+2025-10-26 17:34:12 - [TEST_STEP][PASSED] - response = sendRequestAndVerify(findTestObject("PATCH - Update a User", ["UserId":randomId])): Send request and verify the response successfully
+
+2025-10-26 17:34:12 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_173355\Verify Schema json\20251026_173355\requests\main\3.har
+
+2025-10-26 17:34:12 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2025-10-26 17:34:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - getStatusCode()).isEqualTo(200): null
+
+2025-10-26 17:34:13 - [MESSAGE][PASSED] - Verify response successfully
+
+2025-10-26 17:34:13 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - println(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - schemaPath = getProjectDir() + "/Include/schemas/update_a_user.json": null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - schemaFile = new java.io.File(schemaPath): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - schemaJson = new org.json.JSONObject(new org.json.JSONTokener(new java.io.FileInputStream(schemaFile))): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - responseJson = new org.json.JSONArray(response.getResponseBodyContent()): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - load(schemaJson).validate(responseJson): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Verifikasi Schema/DELETE - Delete a User" time="0.953" classname="Test Cases/Verifikasi Schema/DELETE - Delete a User" status="PASSED">
+         <system-out><![CDATA[2025-10-26 17:34:13 - [TEST_CASE][PASSED] - Test Cases/Verifikasi Schema/DELETE - Delete a User: Test Cases/Verifikasi Schema/DELETE - Delete a User
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - println("Random ID yang digunakan: " + randomId): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - response = sendRequestAndVerify(findTestObject("DELETE - Delete a User", ["UserId":randomId])): Send request and verify the response successfully
+
+2025-10-26 17:34:13 - [MESSAGE][INFO] - HAR: D:\Ra\Katalon\Katalon Mock API\Reports\20251026_173355\Verify Schema json\20251026_173355\requests\main\4.har
+
+2025-10-26 17:34:13 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 204): Verify response status code successfully
+
+2025-10-26 17:34:13 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - getStatusCode()).isEqualTo(204): null
+
+2025-10-26 17:34:13 - [MESSAGE][PASSED] - Verify response successfully
+
+2025-10-26 17:34:13 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2025-10-26 17:34:13 - [TEST_STEP][PASSED] - println(response.getResponseBodyContent()): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2025-10-26 17:34:03 - [TEST_SUITE][PASSED] - Verify Schema json: Test Cases/Verifikasi Schema/DELETE - Delete a User]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,42 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+CRUD,,,,2025-10-26 18:30:41,2025-10-26 18:30:50,8.243s,PASSED
+,,,,,,,
+Test Cases/USER CRUD,,,,2025-10-26 18:30:42,2025-10-26 18:30:50,7.904s,PASSED
+defaultPackage.RandomData.setRandomUserData(),,,,2025-10-26 18:30:42,2025-10-26 18:30:43,0.186s,PASSED
+"println(""Random ID yang digunakan: "" + randomId)",,,,2025-10-26 18:30:43,2025-10-26 18:30:43,0.004s,PASSED
+"createResponse = sendRequest(findTestObject(""POST - Create a New User""))",,,,2025-10-26 18:30:43,2025-10-26 18:30:45,2.738s,PASSED
+"userId = getElementPropertyValue(createResponse, ""id"")",,,,2025-10-26 18:30:45,2025-10-26 18:30:45,0.070s,PASSED
+responseBody0 = createResponse.getResponseBodyContent(),,,,2025-10-26 18:30:45,2025-10-26 18:30:45,0.008s,PASSED
+"println(""Raw Response Body:"")",,,,2025-10-26 18:30:45,2025-10-26 18:30:45,0.003s,PASSED
+println(responseBody0),,,,2025-10-26 18:30:45,2025-10-26 18:30:45,0.003s,PASSED
+json0 = JsonSlurper().parseText(responseBody0),,,,2025-10-26 18:30:45,2025-10-26 18:30:45,0.001s,PASSED
+"if (json0 instanceof java.util.Map && json0.containsKey(""data""))",,,,2025-10-26 18:30:45,2025-10-26 18:30:45,0.001s,PASSED
+else if (json0 instanceof java.util.List),,,,2025-10-26 18:30:45,2025-10-26 18:30:45,0.045s,PASSED
+"readResponse = sendRequestAndVerify(findTestObject(""GET - Single User"", [""UserId"":randomId]))",,,,2025-10-26 18:30:45,2025-10-26 18:30:47,1.307s,PASSED
+"verifyElementPropertyValue(readResponse, ""first_name"", ""[Manusia]"")",,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.032s,PASSED
+responseBody1 = readResponse.getResponseBodyContent(),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.004s,PASSED
+"println(""Raw Response Body:"")",,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.002s,PASSED
+println(responseBody1),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.002s,PASSED
+json1 = JsonSlurper().parseText(responseBody1),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.005s,PASSED
+"if (json1 instanceof java.util.Map && json1.containsKey(""data""))",,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.005s,PASSED
+else if (json1 instanceof java.util.List),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.011s,PASSED
+"updateResponse = sendRequest(findTestObject(""PATCH - Update a User"", [""UserId"":randomId]))",,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.619s,PASSED
+responseBody2 = updateResponse.getResponseBodyContent(),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.001s,PASSED
+"println(""Raw Response Body:"")",,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.001s,PASSED
+println(responseBody2),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.000s,PASSED
+json2 = JsonSlurper().parseText(responseBody2),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.001s,PASSED
+"if (json2 instanceof java.util.Map && json2.containsKey(""data""))",,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.000s,PASSED
+else if (json2 instanceof java.util.List),,,,2025-10-26 18:30:47,2025-10-26 18:30:47,0.002s,PASSED
+"verifyUpdate = sendRequestAndVerify(findTestObject(""GET - Single User"", [""UserId"":randomId]))",,,,2025-10-26 18:30:47,2025-10-26 18:30:48,0.734s,PASSED
+"verifyElementPropertyValue(verifyUpdate, ""job_level"", ""[Senior Manager]"")",,,,2025-10-26 18:30:48,2025-10-26 18:30:48,0.023s,PASSED
+responseBody3 = verifyUpdate.getResponseBodyContent(),,,,2025-10-26 18:30:48,2025-10-26 18:30:48,0.002s,PASSED
+"println(""Raw Response Body:"")",,,,2025-10-26 18:30:48,2025-10-26 18:30:48,0.001s,PASSED
+println(responseBody3),,,,2025-10-26 18:30:48,2025-10-26 18:30:48,0.001s,PASSED
+json3 = JsonSlurper().parseText(responseBody3),,,,2025-10-26 18:30:48,2025-10-26 18:30:48,0.001s,PASSED
+"if (json3 instanceof java.util.Map && json3.containsKey(""data""))",,,,2025-10-26 18:30:48,2025-10-26 18:30:48,0.003s,PASSED
+else if (json3 instanceof java.util.List),,,,2025-10-26 18:30:48,2025-10-26 18:30:48,0.009s,PASSED
+"deleteResponse = sendRequest(findTestObject(""DELETE - Delete a User"", [""UserId"":randomId]))",,,,2025-10-26 18:30:48,2025-10-26 18:30:49,0.627s,PASSED
+println(deleteResponse.getResponseBodyContent()),,,,2025-10-26 18:30:49,2025-10-26 18:30:49,0.000s,PASSED
+"checkDeleted = sendRequest(findTestObject(""GET - Single User"", [""UserId"":randomId]))",,,,2025-10-26 18:30:49,2025-10-26 18:30:50,0.931s,PASSED
+"verifyResponseStatusCode(checkDeleted, 200)",,,,2025-10-26 18:30:50,2025-10-26 18:30:50,0.003s,PASSED
+println(checkDeleted.getResponseBodyContent()),,,,2025-10-26 18:30:50,2025-10-26 18:30:50,0.000s,PASSED

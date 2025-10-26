@@ -18,9 +18,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.w
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.testng.keyword.internal.TestNGDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\rilaa\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Verifikasi Schema\\PATCH - Update a User\\20251026_141619\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\rilaa\\AppData\\Local\\Temp\\Katalon\\20251026_174150\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/Verifikasi Schema/PATCH - Update a User', new TestCaseBinding('Test Cases/Verifikasi Schema/PATCH - Update a User',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('', new TestCaseBinding('',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

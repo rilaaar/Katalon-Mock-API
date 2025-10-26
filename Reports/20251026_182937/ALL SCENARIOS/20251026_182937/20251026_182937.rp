@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportCollectionEntity>
+   <description></description>
+   <name>20251026_182937</name>
+   <tag></tag>
+   <displayName>20251026_182937</displayName>
+   <reportItemDescriptions>
+      <ReportItemDescription>
+         <reportLocation>Reports/20251026_182937/Verify Schema json/20251026_182939</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>Env QA</profileName>
+            <requireConfigurationData>false</requireConfigurationData>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+         <testCaseAmount>0</testCaseAmount>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/20251026_182937/CRUD/20251026_182941</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>Env QA</profileName>
+            <requireConfigurationData>false</requireConfigurationData>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+         <testCaseAmount>0</testCaseAmount>
+      </ReportItemDescription>
+   </reportItemDescriptions>
+   <testSuiteCollectionId>Test Suites/ALL SCENARIOS</testSuiteCollectionId>
+</ReportCollectionEntity>
